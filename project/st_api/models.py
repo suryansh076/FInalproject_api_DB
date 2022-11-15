@@ -16,5 +16,5 @@ class student_details(models.Model):
         ('CSE','CSE'),
         ('ME','ME')
     ))
-    Persent=models.BooleanField(default=True)
+    Present =models.BooleanField(default=True)
     Class=models.ForeignKey(class_details, on_delete=models.CASCADE)

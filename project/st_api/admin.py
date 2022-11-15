@@ -6,7 +6,7 @@ class class_details_show(admin.ModelAdmin):
     list_filter=['cl']
     ordering=['cl']
 class st_details_show(admin.ModelAdmin):
-    list_display=['st_id','name','roll_num','branch','Persent','Class']
+    list_display=['st_id','name','roll_num','branch','Present','Class']
     search_fields=['name',]
     list_filter=['Class','branch']
     ordering=['st_id']
