@@ -11,3 +11,7 @@ class class_veiwset(viewsets.ModelViewSet):
 class st_veiwset(viewsets.ModelViewSet):
     queryset=student_details.objects.all()
     serializer_class=st_seri
+def hello(request):
+    return render(request,'student.html')
+def finger_auth(request):
+    pass

@@ -17,4 +17,6 @@ class student_details(models.Model):
         ('ME','ME')
     ))
     Present =models.BooleanField(default=True)
+    finger_auth =models.BooleanField(default=False)
+    block_student =models.BooleanField(default=False)
     Class=models.ForeignKey(class_details, on_delete=models.CASCADE)

@@ -6,10 +6,10 @@ class class_details_show(admin.ModelAdmin):
     list_filter=['cl']
     ordering=['cl']
 class st_details_show(admin.ModelAdmin):
-    list_display=['st_id','name','roll_num','branch','Present','Class']
+    list_display=['roll_num','st_id','name','branch','Present','finger_auth','block_student','Class']
     search_fields=['name',]
     list_filter=['Class','branch']
-    ordering=['st_id']
+    ordering=['roll_num']
 
 # Register your models here.
 admin.site.register(class_details,class_details_show)

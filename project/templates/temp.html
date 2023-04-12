@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setInterval(function() {
+
+function getLocalStream() {
+  navigator.mediaDevices
+    .getUserMedia({ video: false, audio: true })
+    .then((stream) => {
+      window.localStream = stream;
+    })
+    .catch((err) => {
+      alert(`you got an error: ${err}`);
+    });
+}
+
+getLocalStream();
+DetectRTC.load(function() {
+  DetectRTC.hasWebcam //(has webcam device!)
+  DetectRTC.hasMicrophone// (has microphone device!)
+  DetectRTC.hasSpeakers //(has speakers!)
+  document.getElementById("audio").innerHTML=(DetectRTC.audioOutputDevices.length)
+  localStorage.setItem("device", DetectRTC.audioOutputDevices.length);
+
+  // DetectRTC.DetectLocalIPAddress(callback)
+});
+}, 1000);
+    </script>
+</body>
+</html>
