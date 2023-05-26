@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from st_api.views import hello
+admin.site.site_header="AKGEC ADMINISTRATION"
+admin.site.site_title="Akgec"
 urlpatterns = [
     path('',hello,name='hello'),
     path('setapi/',include('st_api.urls_api')),
